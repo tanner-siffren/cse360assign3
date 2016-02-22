@@ -12,7 +12,7 @@ public class CalculatorTest
 	{
 		Calculator data = new Calculator();
 		
-		assertNotNull(data);
+		assertNotNull(data); //tests that total isn't null
 	}
 
 	@Test
@@ -20,7 +20,7 @@ public class CalculatorTest
 	{
 		Calculator data = new Calculator();
 		
-		assertEquals(0, data.getTotal());
+		assertEquals(0, data.getTotal()); //tests that the initial value of total is 0
 	}
 
 	@Test
@@ -30,7 +30,7 @@ public class CalculatorTest
 		data.add(4);
 		data.add(2);
 		
-		assertEquals(6, data.getTotal());
+		assertEquals(6, data.getTotal()); // tests that 4 + 2 = 6
 	}
 
 	@Test
@@ -40,7 +40,7 @@ public class CalculatorTest
 		data.add(4);
 		data.subtract(2);
 		
-		assertEquals(2, data.getTotal());
+		assertEquals(2, data.getTotal()); // tests 4 - 3 = 2
 	}
 
 	@Test
@@ -50,7 +50,7 @@ public class CalculatorTest
 		data.add(4);
 		data.multiply(2);
 		
-		assertEquals(8, data.getTotal());
+		assertEquals(8, data.getTotal()); // tests 4 * 2 = 8
 	}
 
 	@Test
@@ -60,7 +60,7 @@ public class CalculatorTest
 		data.add(4);
 		data.divide(2);
 		
-		assertEquals(2, data.getTotal());
+		assertEquals(2, data.getTotal()); // tests 4 / 2 = 2
 	}
 	
 	@Test
@@ -70,7 +70,7 @@ public class CalculatorTest
 		data.add(4);
 		data.divide(0);
 		
-		assertEquals(0, data.getTotal());
+		assertEquals(0, data.getTotal()); // tests 4 / 0 returns 0
 	}
 
 	@Test
@@ -82,7 +82,7 @@ public class CalculatorTest
 		data.multiply(2);
 		data.add(5);
 		
-		assertEquals("0 + 4 - 2 * 2 + 5", data.getHistory());
+		assertEquals("0 + 4 - 2 * 2 + 5", data.getHistory()); // test that get history returns a string of the different integers and their operators
 	}
 
 }
