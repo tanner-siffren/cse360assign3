@@ -4,10 +4,12 @@ public class Calculator
 {
 	
 	private int total;
+	private String hist; 
 	
 	public Calculator () 
 	{
 		total = 0;  // not needed - included for clarity
+		hist = "0";
 	}
 	
 	public int getTotal ()
@@ -18,16 +20,19 @@ public class Calculator
 	public void add (int value) 
 	{
 		total = total + value;
+		hist = hist  + " + " + value;
 	}
 	
 	public void subtract (int value) 
 	{
 		total = total - value;
+		hist = hist  + " - " + value;
 	}
 	
 	public void multiply (int value) 
 	{
 		total = total * value;
+		hist = hist  + " * " + value;
 	}
 	
 	public void divide (int value) 
@@ -36,11 +41,12 @@ public class Calculator
 		total = 0;
 		else
 		total = total / value;
+		hist = hist  + " / " + value;
 	}
 	
 	public String getHistory () 
 	{
-		return "";
+		return hist;
 	}
 
 }
